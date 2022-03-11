@@ -10,6 +10,7 @@ import { ModulesComponent } from './modules/modules.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  
   {path: 'filieres', component: FilieresComponent},
   {path: 'filieres/:id', component: FiliereComponent},
   {path: 'filiere-form', component: FiliereFormComponent},
