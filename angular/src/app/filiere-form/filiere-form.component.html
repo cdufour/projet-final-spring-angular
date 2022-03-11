@@ -1,0 +1,17 @@
+<h3>{{actionText}} une filière</h3>
+<form (submit)="handleSubmit()" #f="ngForm" class="form-inline m-auto">
+  <div class="form-group">
+    <label for="libelle">Libellé</label>
+    <input 
+      [(ngModel)]="filiere.libelle"
+      required
+      minlength="4"
+      placeholder="Nom de la filière"
+      name="libelle" 
+      type="text" 
+      class="form-control" />
+  </div>
+  <button 
+    [disabled]="f.invalid"
+    class="btn btn-primary btn-sm">{{actionText}}</button>
+</form>

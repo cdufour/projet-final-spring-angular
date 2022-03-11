@@ -1,0 +1,15 @@
+<div *ngIf="module">
+  <h3>Module {{ module.libelle }}</h3>
+  <p>
+    <strong>Filière: </strong>
+    <span>{{ module.filiere?.libelle }}</span>
+  </p>
+  <p>
+    <strong>Formateur: </strong>
+    <span>A déterminer</span>
+  </p>
+  <p>
+    <strong>Dates: </strong>
+    <span>Du {{ module.dateDebut }} au {{ module.dateFin }}</span>
+  </p>
+</div>

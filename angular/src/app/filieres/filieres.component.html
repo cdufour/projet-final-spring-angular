@@ -1,0 +1,41 @@
+<h3>
+  Nos filières ({{ filieres.length }})
+  <a 
+    [routerLink]="['/filiere-form']"
+    class="m-2 btn btn-primary btn-sm">Ajouter une filière</a>
+</h3>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Libellé</th>
+      <th>Nb de modules</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let filiere of filieres">
+      <td>{{ filiere.libelle }}</td>
+      <td>{{ filiere.modules?.length }}</td>
+      <td>
+        <button 
+          (click)="onView(filiere.id)"
+          class="btn btn-sm btn-primary m-1">Voir</button>
+        <button 
+          (click)="onEdit(filiere.id)"
+          class="btn btn-sm btn-primary m-1">Modifier</button>
+        <button 
+          (click)="onDelete(filiere.id)"
+          class="btn btn-sm btn-danger">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+
+<div 
+  *ngIf="message" 
+  class="alert alert-danger text-center" 
+  role="alert"> 
+  {{ message }}
+</div>
+

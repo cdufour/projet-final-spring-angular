@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+
+  spring:
+    #build: .
+    image: opusidea/tpprojetmvc_spring
+    ports: 
+    - 8082:8082
+    depends_on:
+    - db
+    environment:
+      MYSQL_HOST: db
+  
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: eclipse
+      MYSQL_DATABASE: projetspringmvc
+      MYSQL_USER: eclipse
+      MYSQL_PASSWORD: eclipse

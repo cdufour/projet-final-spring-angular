@@ -1,0 +1,56 @@
+<h3>{{actionText}} un module</h3>
+<form (submit)="handleSubmit()" #f="ngForm" class="m-auto">
+  <div class="form-group">
+    <label for="libelle">Libellé</label>
+    <input 
+      [(ngModel)]="module.libelle"
+      required
+      minlength="4"
+      name="libelle" 
+      type="text" 
+      class="form-control" 
+      placeholder="Nom du module">
+  </div>
+  <div class="form-group ">
+    <label for="filiere">Filière</label>
+    <select 
+      [(ngModel)]="module.filiere.id"
+      class="form-control" 
+      name="filiere">
+      <option 
+        *ngFor="let filiere of filieres" 
+        [value]="filiere.id">{{ filiere.libelle }}</option>
+    </select>
+  </div>
+  <div class="form-group ">
+    <label for="formateur">Formateur</label>
+    <select
+      class="form-control" 
+      name="formateur">
+      <option 
+        *ngFor="let formateur of formateurs" 
+        [value]="formateur.id">{{ formateur.prenom + ' ' + formateur.nom}}</option>
+    </select>
+  </div>
+  <div class="form-group ">
+    <label for="dateDebut">Date de début</label>
+    <input 
+      [(ngModel)]="module.dateDebut"
+      type="date" 
+      name="dateDebut"
+      class="form-control" />
+  </div>
+  <div class="form-group ">
+    <label for="dateDebut">Date de fin</label>
+    <input 
+      [(ngModel)]="module.dateFin"
+      type="date" 
+      name="dateFin"
+      class="form-control" />
+  </div>
+  <div class="form-group">
+    <button 
+      [disabled]="f.invalid"
+      class="btn btn-sm btn-primary">{{actionText}}</button>  
+  </div>
+</form>

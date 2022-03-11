@@ -1,0 +1,36 @@
+<h3>
+  Nos modules ({{ modules.length }})
+  <a 
+  [routerLink]="['/module-form']"
+  class="m-2 btn btn-primary btn-sm">Ajouter un module</a>
+</h3>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Libellé</th>
+      <th>Filière</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let module of modules">
+      <td>{{ module.libelle }}</td>
+      <td>
+        <a [routerLink]="['/filieres', module.filiere?.id]">
+          {{ module.filiere?.libelle }}
+        </a>
+      </td>
+      <td>
+        <button 
+          (click)="onView(module.id)"
+          class="btn btn-primary btn-sm m-1">Voir</button>
+        <button 
+          (click)="onEdit(module.id)"
+          class="btn btn-primary btn-sm m-1">Modifier</button>
+        <button 
+          (click)="onDelete(module.id)"
+          class="btn btn-danger btn-sm">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

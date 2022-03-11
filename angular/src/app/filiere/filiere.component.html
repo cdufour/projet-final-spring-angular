@@ -1,0 +1,17 @@
+<div *ngIf="filiere">
+  <h3>Filière {{ filiere.libelle }}</h3>
+
+  <h4>Modules</h4>
+  <span *ngIf="filiere.modules?.length === 0">Aucun module renseigné pour le moment</span>
+  <ul *ngIf="filiere.modules">
+    <li *ngFor="let module of filiere.modules">
+      <a [routerLink]="['/modules', module.id]">
+        {{ module.libelle }}
+      </a>
+    </li>
+  </ul>
+
+  <h4>Stagiaires</h4>
+  <span *ngIf="filiere.stagiaires?.length === 0">Aucun stagiaire renseigné pour le moment</span>
+</div>
+

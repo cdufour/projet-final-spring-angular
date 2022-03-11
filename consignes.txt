@@ -1,0 +1,27 @@
+*** Projet spring/angular ***
+
+Créer un front Angular permettant d'interagir avec l'application back de gestion de formations réalisée en Spring. Les groupes seront les mêmes que pour le projet back.
+
+Il s'agira d'une application avec typage, routage, services, et, bien entendu, multi-composants.
+
+Votre application devra permettre d'effectuer les opérations CRUD sur les entités filière et module.
+Ainsi, l'interface permettra, par exemple:
+- d'enregistrer une filière
+- de modifier une filière
+- de supprimer une filière
+- de lister les filières
+
+Le clic sur une filière (depuis la liste) devra conduire sur une page dédiée affichant la totalité des informations relatives à cette filière (libellé, modules, etc.)
+
+Le clic sur un module (depuis la liste des modules ou depuis une page filière) devra conduire sur une page dédiée affichant la totalité des informations relatives à ce module (libellé, formateur, etc.)
+
+Pour ce projet, les endpoints (routes) requêtés par l'application Front seront publics. Il ne sera donc pas nécessaire d'en protéger l'accès. Toutefois, si vous avez les moyens, vous êtes autorisés à ajouter un mécanisme de protection des endpoints (exemple: par token).
+
+Des contraintes de validation sur les formulaires, bien que facultatives dans ce projet, seront toute de même appréciées.
+
+La stylisation est ici secondaire. Vous êtes libre d'utiliser un framework (exemple: bootstrap) si vous le souhaitez.
+
+
+Les sources de l'application Angular devront être placées sur un dépôt git dont l'adresse devra m'être communiquée.
+
+N.B: si vous ne disposez pas du back complet ou d'un back différent, vous êtes autorisés à travailler avec d'autres entités que les entités Filière et Module. L'important dans ce projet est de valider votre capacité à faire communiquer un back Spring avec un front Angular.

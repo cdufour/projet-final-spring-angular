@@ -1,0 +1,12 @@
+form {
+  width: 50%
+}
+
+.form-control, button {
+  margin: 10px
+}
+
+label {
+  margin-left: 10px;
+  font-weight: bold;
+}
